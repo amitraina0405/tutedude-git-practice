@@ -1,0 +1,358 @@
+laisha_krish@Amits-MacBook-Air ~ % git clone git@github.com:amitraina0405/tutedude-git-practice.git
+Cloning into 'tutedude-git-practice'...
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (4/4), done.
+Receiving objects: 100% (5/5), done.
+remote: Total 5 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+laisha_krish@Amits-MacBook-Air ~ % ls
+Desktop			Library			Pictures		cretfile.py		logs			nltk_data		tutedude-new-project
+Documents		Movies			Public			dictor.py		mlops			tataaia-dr-infra	tutedude_poc_flaskapp
+Downloads		Music			codework		grade.py		new_project_tutedude_1	tutedude-git-practice
+laisha_krish@Amits-MacBook-Air ~ % cd tutedude-git-practice 
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % ls
+LICENSE		README.md
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git branch tutedude
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git branch
+* main
+  tutedude
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % vi app.py
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % rm -rf app.py 
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % ls
+LICENSE		README.md
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git checkout tutedude
+Switched to branch 'tutedude'
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % vi app.py
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % ls
+LICENSE		README.md	app.py
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git status
+On branch tutedude
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	app.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git add .
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git commit -m "First Flask Project"
+[tutedude 3557004] First Flask Project
+ 1 file changed, 16 insertions(+)
+ create mode 100644 app.py
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git push origin tutedude
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 507 bytes | 507.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'tutedude' on GitHub by visiting:
+remote:      https://github.com/amitraina0405/tutedude-git-practice/pull/new/tutedude
+remote: 
+To github.com:amitraina0405/tutedude-git-practice.git
+ * [new branch]      tutedude -> tutedude
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git merge tutedude
+Updating 7e3d33e..3557004
+Fast-forward
+ app.py | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+ create mode 100644 app.py
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git push origin main
+Total 0 (delta 0), reused 0 (delta 0)
+To github.com:amitraina0405/tutedude-git-practice.git
+   7e3d33e..3557004  main -> main
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % 
+
+
+
+
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git branch tutedude_new
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git branch
+* main
+  tutedude
+  tutedude_new
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git checkout tutedude_new
+Switched to branch 'tutedude_new'
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git branch              
+  main
+  tutedude
+* tutedude_new
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % vi data.json
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git status
+On branch tutedude_new
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	data.json
+
+nothing added to commit but untracked files present (use "git add" to track)
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git branch              
+  main
+  tutedude
+* tutedude_new
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git add .
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git commit -m "Added Json File""
+dquote> 
+dquote> 
+dquote> 
+dquote> 
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git commit -m "Added Json File" 
+
+
+
+[tutedude_new 43aac88] Added Json File
+ 1 file changed, 8 insertions(+)
+ create mode 100644 data.json
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git push origin
+fatal: The current branch tutedude_new has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin tutedude_new
+
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git push origin tutedude_new
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 417 bytes | 417.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'tutedude_new' on GitHub by visiting:
+remote:      https://github.com/amitraina0405/tutedude-git-practice/pull/new/tutedude_new
+remote: 
+To github.com:amitraina0405/tutedude-git-practice.git
+ * [new branch]      tutedude_new -> tutedude_new
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git merge tutedude_new
+Updating 3557004..43aac88
+Fast-forward
+ data.json | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+ create mode 100644 data.json
+
+
+
+
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git branch
+  main
+  master_1
+* master_2
+  tutedude
+  tutedude_new
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git checkout main
+M	app.py
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % ls
+LICENSE		README.md	app.py		data.json	templates
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % vi app.py 
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git checkout master_1
+M	app.py
+Switched to branch 'master_1'
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git status
+On branch master_1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   app.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	templates/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git add .
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git commit -m "Added frontend code"
+[master_1 fb0e826] Added frontend code
+ 2 files changed, 31 insertions(+), 1 deletion(-)
+ create mode 100644 templates/todo.html
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git push origin master_1
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 1.05 KiB | 1.05 MiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'master_1' on GitHub by visiting:
+remote:      https://github.com/amitraina0405/tutedude-git-practice/pull/new/master_1
+remote: 
+To github.com:amitraina0405/tutedude-git-practice.git
+ * [new branch]      master_1 -> master_1
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % ls
+LICENSE		README.md	app.py		data.json	templates
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git checkout master_2
+Switched to branch 'master_2'
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git status
+On branch master_2
+nothing to commit, working tree clean
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % ls
+LICENSE		README.md	app.py		data.json
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % vi app.py 
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git status
+On branch master_2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   app.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git add .
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git commit -m "Added backend route"
+[master_2 12f5c15] Added backend route
+ 1 file changed, 27 insertions(+)
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git push origin master_2
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 858 bytes | 858.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'master_2' on GitHub by visiting:
+remote:      https://github.com/amitraina0405/tutedude-git-practice/pull/new/master_2
+remote: 
+To github.com:amitraina0405/tutedude-git-practice.git
+ * [new branch]      master_2 -> master_2
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % ls
+LICENSE		README.md	app.py		data.json
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git pull
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), done.
+From github.com:amitraina0405/tutedude-git-practice
+   3557004..37e10ec  main       -> origin/main
+Updating 43aac88..37e10ec
+Fast-forward
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git pull
+Already up to date.
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % ls
+LICENSE		README.md	app.py		data.json
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git merge master_1
+Merge made by the 'recursive' strategy.
+ app.py              | 11 ++++++++++-
+ templates/todo.html | 21 +++++++++++++++++++++
+ 2 files changed, 31 insertions(+), 1 deletion(-)
+ create mode 100644 templates/todo.html
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git merge master_2
+Auto-merging app.py
+CONFLICT (content): Merge conflict in app.py
+Automatic merge failed; fix conflicts and then commit the result.
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+	both modified:   app.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % vi app.py 
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git add . 
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+	modified:   app.py
+
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git commit -m "merged the changes from both the branches"
+[main 497a834] merged the changes from both the branches
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git push origin main
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 777 bytes | 777.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:amitraina0405/tutedude-git-practice.git
+   37e10ec..497a834  main -> main
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % 
+
+
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git branch
+* main
+  master_1
+  master_2
+  tutedude
+  tutedude_new
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git log oneline
+fatal: ambiguous argument 'oneline': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git log --oneline
+254b537 (HEAD -> main, origin/master_1, master_1) Added hash field
+d179ef6 Added the UUID
+d10e2fc Added Item ID
+497a834 (origin/main, origin/HEAD) merged the changes from both the branches
+db33605 Merge branch 'master_1' into main
+12f5c15 (origin/master_2, master_2) Added backend route
+37e10ec Merge pull request #1 from amitraina0405/tutedude_new
+fb0e826 Added frontend code
+43aac88 (origin/tutedude_new, tutedude_new) Added Json File
+3557004 (origin/tutedude, tutedude) First Flask Project
+7e3d33e Initial commit
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git reset --hard d10e2fc
+HEAD is now at d10e2fc Added Item ID
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git reset --soft d10e2fc
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git branch
+* main
+  master_1
+  master_2
+  tutedude
+  tutedude_new
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git pull
+Already up to date.
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git checkout master_1
+Switched to branch 'master_1'
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git pull
+Already up to date.
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git rebase main
+Current branch master_1 is up to date.
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git branch
+  main
+* master_1
+  master_2
+  tutedude
+  tutedude_new
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % git rebase main master_1 
+Current branch master_1 is up to date.
+laisha_krish@Amits-MacBook-Air tutedude-git-practice % 
+
